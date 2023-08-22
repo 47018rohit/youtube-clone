@@ -1,0 +1,26 @@
+#searchWrapper {
+    position: relative;
+    
+    display: flex;
+    margin-left: 0;
+    width: 100%;
+
+}
+
+.searchIconWrapper {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchInput {
+    height: 1rem;
+    padding: .5rem;
+    border: 1px solid #7a7a7a;
+    border-radius: 1rem;
+}
+
+.searchInput:focus {
+    outline: none;
+}
