@@ -1,12 +1,15 @@
 import { Contents, Sidebar, Navbar } from '@/components'
 import './globals.css'
 import { configureStore } from '@reduxjs/toolkit'
-import { themeReducer } from '@/slices'
+import { themeReducer, toggleReducer , menuReducer} from '@/slices'
 import { Provider } from 'react-redux'
+import { Box } from '@mui/material'
 
 const index = () => {
     const rootReducer = {
         theme: themeReducer,
+        toggleSidebar: toggleReducer,
+        menuSelected: menuReducer
     }
 
     const store = configureStore({
@@ -16,8 +19,10 @@ const index = () => {
     return (
         <Provider store={store}>
             <Navbar />
-            <Sidebar />
-            <Contents />
+            <Box sx={{display: 'flex' }}>
+                <Sidebar />
+                <Contents />
+            </Box>
         </Provider>
     )
 }
