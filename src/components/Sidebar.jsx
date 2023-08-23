@@ -1,4 +1,4 @@
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SvgIcon } from "@mui/material"
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, SvgIcon, Typography } from "@mui/material"
 import { useDispatch, useSelector } from "react-redux"
 import styles from './sidebar.module.css'
 import { sidebarMenu } from "@/contents/contents"
@@ -25,16 +25,17 @@ const Sidebar = () => {
           >
             <ListItem disablePadding>
               <ListItemButton >
-                <ListItemIcon color="#eee">
-                  <SvgIcon component={e.icon}  />
+                <ListItemIcon >
+                  <SvgIcon component={e.icon} sx={{color:'#eee'}}/>
                 </ListItemIcon>
-                <ListItemText
-                  
-                  primary={e.name.charAt(0).toUpperCase() + e.name.slice(1)}
-                  sx={{
-                    display: `${toggle ? '' : 'none'}`
-                  }}
-                />
+                <Typography 
+                sx={{
+                  display: `${toggle ? '' : 'none'}`,
+                  fontSize: '12px ',
+                  color: '#eee'
+                }}>
+                  {e.name.charAt(0).toUpperCase() + e.name.slice(1)}
+                </Typography>
               </ListItemButton>
             </ListItem>
           </List>
