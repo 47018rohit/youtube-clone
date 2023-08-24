@@ -1,4 +1,4 @@
-import { Home, Whatshot, MusicNote, Movie, ShoppingBag } from "@mui/icons-material"
+import { Home, Whatshot, MusicNote, Movie, Gamepad } from "@mui/icons-material"
 
 
 export const sidebarMenu = [
@@ -6,5 +6,5 @@ export const sidebarMenu = [
     { name: 'trending', icon: Whatshot },
     { name: 'music', icon: MusicNote },
     { name: 'movie', icon: Movie },
-    { name: 'shopping', icon: ShoppingBag },
+    { name: 'games', icon: Gamepad },
 ]

@@ -4,7 +4,7 @@ const menuSelectedSlice = createSlice({
     name: 'menuSelected',
     initialState: 'home',
     reducers:{
-        setMenuSelected : (state, action)=>{
+        setMenuSelected : (data, action)=>{
             return action.payload
         }
     }
