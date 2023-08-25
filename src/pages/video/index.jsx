@@ -1,9 +1,12 @@
+import Video from './Video'
 import React from 'react'
 
-const index = () => {
+const VideoPage = () => {
   return (
-    <div>Video</div>
+    <>
+      <Video/>
+    </>
   )
 }
 
-export default index
+export default VideoPage
