@@ -7,8 +7,12 @@ const Video = () => {
     
   const data = useSelector(state => state.video)
     return (
-        <Box className="videoWrapper">
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${data.videoId}`} controls={true}/>
+        <Box className="videoWrapper"
+            display='flex'
+            justifyContent='center'
+            alignItems='center'
+        >
+            <ReactPlayer url={`https://www.youtube.com/watch?v=${data.videoId}`} controls={true} width={1080} height={720}/>
         </Box>
     )
 }

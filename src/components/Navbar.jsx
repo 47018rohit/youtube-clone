@@ -12,7 +12,7 @@ import {
 import { Menu, Search } from '@mui/icons-material';
 import { useDispatch } from 'react-redux';
 import { setToggleSidebar } from '@/slices/toggleSlice';
-
+import styles from './navbar.module.css'
 
 
 export default function Navbar() {
@@ -40,6 +40,7 @@ export default function Navbar() {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            className={styles.logo}
           >
             You-Tube
           </Typography>
