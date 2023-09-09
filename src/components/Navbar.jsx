@@ -12,14 +12,15 @@ import {
 import { Menu, Search } from '@mui/icons-material';
 import { useDispatch } from 'react-redux';
 import { setToggleSidebar } from '@/slices/toggleSlice';
-import styles from './navbar.module.css'
+import { useRouter } from 'next/router';
 
 
 export default function Navbar() {
   const dispatch = useDispatch()
-  const handleToggle =()=>{
+  const handleToggle = () => {
     dispatch(setToggleSidebar())
   }
+  const router=useRouter();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -30,29 +31,33 @@ export default function Navbar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2 , display: { xs: 'none', sm: 'block' } }}
             onClick={handleToggle}
           >
             <Menu />
           </IconButton>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            className={styles.logo}
-          >
-            You-Tube
-          </Typography>
-          <SearchWrapper>
-            <SearchIconWrapper>
-              <Search />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </SearchWrapper>
+          <Box sx={{flex: 1, display: 'flex', justifyContent: 'space-between'}}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ cursor: 'pointer' }}
+              onClick={()=>{
+                return router.push('/')
+              }}
+            >
+              You-Tube
+            </Typography>
+            <SearchWrapper >
+              <SearchIconWrapper >
+                <Search />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </SearchWrapper>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>

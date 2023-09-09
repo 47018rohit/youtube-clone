@@ -1,5 +1,6 @@
 // import './globals.css'
-import { Navbar } from '@/components'
+import { Navbar, Sidebar } from '@/components'
+import { Box } from '@mui/material'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <Box sx={{ display: 'flex' }}>
+        <Sidebar />
+        {children}
+      </Box>
     </>
   )
 }

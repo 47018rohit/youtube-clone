@@ -41,15 +41,18 @@ const Contents = () => {
               onClick = {()=>goToVideo(e)}
               key={e.title}
               sx={{
-                width: '246px',
-                height: '200px',
+                margin: {xs: 'auto'},
+                width: {sm:'246px', xs: "450px"},
+                height: {sm:'200px', xs: "365px"},
                 cursor: 'pointer'
               }}
             >
               <CardMedia
                 component='img'
-                width='246px'
-                height='138px'
+                sx={{
+                  width: {sm:'246px', xs: "450px"},
+                  height: {sm:'138px', xs: "252px"},
+                }}
                 image={e.thumbnail[1].url}
                 alt={e.title}
               />

@@ -2,16 +2,14 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, SvgIcon, Typography 
 import { useDispatch, useSelector } from "react-redux"
 import styles from './sidebar.module.css'
 import { sidebarMenu } from "@/contents/contents"
-import { useState } from "react"
 import { setMenuSelected } from "@/slices/menuSelectedSlice"
 
 
 const Sidebar = () => {
   const toggle = useSelector(state => state.toggleSidebar)
   const dispatch = useDispatch()
-  const [selected, setSelected] = useState('home')
+  const selected = useSelector(state=> state.menuSelected)
   const handleSelected = (e) => {
-    setSelected(e.name)
     dispatch(setMenuSelected(e.name))
   }
 
