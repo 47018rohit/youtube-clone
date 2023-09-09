@@ -4,8 +4,7 @@ import { Box } from '@mui/material'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
+ const metadata = {
   title: 'You-tube',
   description: 'Youtube clone',
 }
