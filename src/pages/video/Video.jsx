@@ -4,15 +4,20 @@ import ReactPlayer from 'react-player'
 import { useSelector } from 'react-redux'
 
 const Video = () => {
-    
-  const data = useSelector(state => state.video)
+
+    const data = useSelector(state => state.video)
     return (
-        <Box className="videoWrapper"
-            display='flex'
-            justifyContent='center'
-            alignItems='center'
+        <Box className="videoWrapper" sx={{
+            width: '100%',
+            backgroundColor: '#aaa',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+        }}
         >
-            <ReactPlayer url={`https://www.youtube.com/watch?v=${data.videoId}`} controls={true} width={1080} height={720}/>
+            <section>
+                <ReactPlayer url={`https://www.youtube.com/watch?v=${data.videoId}`} playing={true} controls={true} width={1080} height={720} />
+            </section>
         </Box>
     )
 }
