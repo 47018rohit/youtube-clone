@@ -1,0 +1,18 @@
+.videoWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 3rem ;
+    overflow: auto;
+}
+
+.videoFrame {
+    overflow: hidden;
+    border-radius: .75rem;
+    flex: 3;
+}
+
+
+.suggestedVideos {
+    width: 20%;
+    flex: 1;
+}
