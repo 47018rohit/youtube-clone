@@ -20,6 +20,7 @@ const Video = () => {
                         width: frameSize.width,
                         height: frameSize.height
                     }}
+                    
                     videoId={data.videoId}
                     title={data.title}
                     onReady={handleReady}
